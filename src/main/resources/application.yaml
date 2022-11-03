@@ -1,0 +1,20 @@
+server:
+  port: 80
+  # 注意冒号前面有个空格
+user:
+  name: zhangsan
+  age: 18
+
+basedir: C:\windows
+# 配置文件中可以通过这种方式进行引用
+tempdir: ${basedir}\temp
+# 在配置文件里面支持转义字符但是需要使用引号，输出的是C:\windows\ emp
+tempdir1: "${basedir}\temp"
+
+# 通过自定义对象读取配置文件中的值
+datasource:
+  password: 123145
+  type: com.alibaba.druid.pool.DruidDataSource
+  username: sa
+  driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  url: jdbc:sqlserver://localhost:1433;DataBaseName=test;

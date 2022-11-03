@@ -1,0 +1,5 @@
+server:
+  port: 8080
+# 关闭spring项目启动时运行的图标spring:
+  main:
+    banner-mode: off
